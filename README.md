@@ -10,10 +10,8 @@ PyTorch implementation of “DSTSA-GCN: Advancing Skeleton-Based Gesture Recogni
 
 - SHREC
   - Download the SHREC data from http://www-rech.telecom-lille.fr/shrec2017-hand/
-  - Generate the train/test splits with `python prepare/shrec/gendata.py`
 - DHG
   - Download the DHG data from the http://www-rech.telecom-lille.fr/DHGdataset/
-  - Generate the train/test splits with `python prepare/dhg/gendata.py`
 - NTU-60
   - Download the NTU-60 data from the [ROSE Lab](https://rose1.ntu.edu.sg/dataset/actionRecognition/) or https://drive.google.com/open?id=1CUZnBtYwifVXS21yVg62T-vrPVayso5H
 - NTU-120
