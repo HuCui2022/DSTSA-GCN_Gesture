@@ -1,0 +1,64 @@
+work_dir: ./work_dir/shrec28/criss_stgcnv2/filter4_sp_info  #
+
+# feeder
+feeder: feeders.feeder_shrec17.Feeder
+train_feeder_args:
+  data_path: joint  # 模态 joint, bone, motion, bone motion
+  label_path: train # 训练
+  debug: False
+  random_choose: True
+  random_shift: False
+  random_move: False
+  window_size: 180 # max
+  normalization: False
+  repeat: 5 # 重复
+  label_flag: 28 # 14 or 28
+
+
+test_feeder_args:
+  data_path: joint # 模态
+  label_path: val # 验证
+  debug: False
+  random_choose: False
+  label_flag: 28 # 14 or 28
+
+# model
+#model: model.criss_stgcn_v2.Model   #
+model: model.criss_stgcn_v2_info.Model   #
+model_args:
+  graph_cfg:
+#    layout: "nturgb+d"
+    layout: "shrec"
+#    mode: "random"    # seperated_adjacency
+    mode: "seperated_adjacency"    # seperated_adjacency
+    num_filter: 4
+    init_off: 0.04
+    init_std: 0.02
+  num_classes: 28
+  in_channels: 3
+  base_channels: 64
+  ch_ratio: 2
+  num_stages: 10
+  inflate_stages: [5, 8]
+  down_stages: [5, 8]
+  data_bn_type: 'VC'
+  num_person: 1
+  pretrained: None
+  dropout: 0.0
+
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.1
+lr_decay_rate: 0.1
+step: [70, 100]
+warm_up_epoch: 5
+
+# training
+device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 150
+# official numpoche: 65
+nesterov: True
+seed : 2

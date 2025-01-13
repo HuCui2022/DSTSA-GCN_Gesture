@@ -1,0 +1,80 @@
+# command line: main2.py --config configs/shrec17/14/j4.yaml
+
+base_lr: 0.1
+batch_size: 64
+config: configs/shrec17/14/j4.yaml
+device:
+- 0
+ema: false
+eval_interval: 5
+feeder: feeders.feeder_shrec17.Feeder
+ignore_weights: []
+joint_label: []
+lambda_1: 0.0001
+lambda_2: 0.1
+log_interval: 100
+lr_decay_rate: 0.1
+model: model.criss_stgcn_v2.Model
+model_args:
+  base_channels: 64
+  ch_ratio: 2
+  data_bn_type: VC
+  down_stages:
+  - 5
+  - 8
+  dropout: 0.0
+  graph_cfg:
+    init_off: 0.04
+    init_std: 0.02
+    layout: shrec
+    mode: random
+    num_filter: 12
+  in_channels: 3
+  inflate_stages:
+  - 5
+  - 8
+  num_classes: 14
+  num_person: 1
+  num_stages: 10
+  pretrained: None
+model_saved_name: ''
+momentum: 0.9
+nesterov: true
+num_epoch: 150
+num_worker: 2
+optimizer: SGD
+phase: train
+print_log: true
+save_epoch: 10
+save_interval: 1
+save_score: false
+seed: 2
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 70
+- 100
+test_batch_size: 64
+test_feeder_args:
+  data_path: joint
+  debug: false
+  label_flag: 14
+  label_path: val
+  random_choose: false
+train_feeder_args:
+  data_path: joint
+  debug: false
+  label_flag: 14
+  label_path: train
+  normalization: false
+  random_choose: true
+  random_move: false
+  random_shift: false
+  repeat: 5
+  window_size: 180
+warm_up_epoch: 5
+weight_decay: 0.0005
+weights: null
+work_dir: ./work_dir/shrec14/criss_stgcnv2/rand_head12_viz

@@ -1,0 +1,67 @@
+work_dir: ./work_dir/ntu60/xview/jm
+
+# feeder
+feeder: feeders.feeder_ntu.Feeder
+train_feeder_args:
+  data_path: E:\Code_Graph\ST-SD_Transformer\gendata\ntu\NTU60_XView.npz
+  split: train
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 64
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: True
+  bone: False
+
+test_feeder_args:
+  data_path: E:\Code_Graph\ST-SD_Transformer\gendata\ntu\NTU60_XView.npz
+  split: test
+  window_size: 64
+  p_interval: [0.95]
+  vel: True
+  bone: False
+  debug: False
+
+# model
+model: model.criss_stgcn_v2.Model   # 非info 配合main2.py
+#model: model.criss_stgcn_v2_info.Model   # info 配合 main3.py
+model_args:
+  graph_cfg:
+    layout: "nturgb+d"
+#    layout: "dhg"
+    mode: "random"    # seperated_adjacency
+#    mode: "seperated_adjacency"    # seperated_adjacency
+    num_filter: 4
+    init_off: 0.04
+    init_std: 0.02
+  num_classes: 60
+  in_channels: 3
+  base_channels: 64
+  ch_ratio: 2
+  num_stages: 10
+  inflate_stages: [5, 8]
+  down_stages: [5, 8]
+  data_bn_type: 'VC'
+  num_person: 2
+  pretrained: None
+  dropout: 0.0
+
+
+#optim
+weight_decay: 0.0004
+base_lr: 0.1
+lr_decay_rate: 0.1
+step: [70, 100]
+warm_up_epoch: 20
+
+# training
+device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 170
+# official numpoche: 65
+nesterov: True
+seed : 4
