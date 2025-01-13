@@ -1,0 +1,87 @@
+# command line: main2.py --config configs/nut60/xsub/joint.yaml
+
+base_lr: 0.1
+batch_size: 64
+config: configs/nut60/xsub/joint.yaml
+device:
+- 0
+ema: false
+eval_interval: 5
+feeder: feeders.feeder_ntu.Feeder
+ignore_weights: []
+joint_label: []
+lambda_1: 0.0001
+lambda_2: 0.1
+log_interval: 100
+lr_decay_rate: 0.1
+model: model.criss_stgcn_v2.Model
+model_args:
+  base_channels: 64
+  ch_ratio: 2
+  data_bn_type: VC
+  down_stages:
+  - 5
+  - 8
+  dropout: 0.0
+  graph_cfg:
+    init_off: 0.04
+    init_std: 0.02
+    layout: nturgb+d
+    mode: random
+    num_filter: 4
+  in_channels: 3
+  inflate_stages:
+  - 5
+  - 8
+  num_classes: 60
+  num_person: 2
+  num_stages: 10
+  pretrained: None
+model_saved_name: ''
+momentum: 0.9
+nesterov: true
+num_epoch: 170
+num_worker: 2
+optimizer: SGD
+phase: train
+print_log: true
+save_epoch: 10
+save_interval: 1
+save_score: false
+seed: 4
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 70
+- 100
+test_batch_size: 64
+test_feeder_args:
+  bone: false
+  data_path: E:\Code_Graph\ST-SD_Transformer\gendata\ntu\NTU60_XSub.npz
+  debug: false
+  p_interval:
+  - 0.95
+  split: test
+  vel: false
+  window_size: 64
+train_feeder_args:
+  bone: false
+  data_path: E:\Code_Graph\ST-SD_Transformer\gendata\ntu\NTU60_XSub.npz
+  debug: false
+  normalization: false
+  p_interval:
+  - 0.5
+  - 1
+  random_choose: false
+  random_move: false
+  random_rot: true
+  random_shift: false
+  split: train
+  vel: false
+  window_size: 64
+warm_up_epoch: 20
+weight_decay: 0.0004
+weights: null
+work_dir: ./work_dir/ntu60/xsub/joint
