@@ -17,7 +17,18 @@ PyTorch implementation of “DSTSA-GCN: Advancing Skeleton-Based Gesture Recogni
 - NTU-120
   - Download the NTU-120 data from the  [ROSE Lab](https://rose1.ntu.edu.sg/dataset/actionRecognition/) or https://drive.google.com/open?id=1CUZnBtYwifVXS21yVg62T-vrPVayso5H
 - Note 1
-  - NTU 60 and 120: 
+  - NTU 60 and 120:
+  - put downloaded data into :
+    ```
+    - gendata/
+      - ntu/
+      - ntu120/
+      - nturgbd_raw/
+        - nturgb+d_skeletons/     # from `nturgbd_skeletons_s001_to_s017.zip`
+          ...
+        - nturgb+d_skeletons120/  # from `nturgbd_skeletons_s018_to_s032.zip`
+          ...
+    ```
     
     step 1 : run :  "get_raw_skes_data.py" extract raw skeleton data.  
     
