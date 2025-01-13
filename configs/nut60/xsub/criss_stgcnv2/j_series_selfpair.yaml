@@ -1,0 +1,65 @@
+work_dir: ./work_dir/ntu60/xsub/criss_stgcnv2/series_selfpairwise  #
+
+# feeder
+feeder: feeders.feeder_ntu.Feeder
+train_feeder_args:
+  data_path: E:\Code_Graph\ST-SD_Transformer\gendata\ntu\NTU60_XSub.npz
+  split: train
+  debug: False
+  random_choose: False
+  random_shift: False
+  random_move: False
+  window_size: 100
+  normalization: False
+  random_rot: True
+  p_interval: [0.5, 1]
+  vel: False
+  bone: False
+
+test_feeder_args:
+  data_path: E:\Code_Graph\ST-SD_Transformer\gendata\ntu\NTU60_XSub.npz
+  split: test
+  window_size: 100
+  p_interval: [0.95]
+  vel: False
+  bone: False
+  debug: False
+
+# model
+model: model.criss_stgcn_v2.Model   #
+model_args:
+  graph_cfg:
+    layout: "nturgb+d"
+    mode: "random"    # seperated_adjacency
+    num_filter: 8
+    init_off: 0.04
+    init_std: 0.02
+  num_classes: 60
+  in_channels: 3
+  base_channels: 64
+  ch_ratio: 2
+  num_stages: 10
+  inflate_stages: [5, 8]
+  down_stages: [5, 8]
+  data_bn_type: 'VC'
+  num_person: 2
+  pretrained: None
+  dropout: 0.0
+  fomod: 'series' # series,parallel,org  并联和串联,原始
+  comod: 'self-pairwise' # dot, pair-wise, self-pairwise
+
+#optim
+weight_decay: 0.0005
+base_lr: 0.1
+lr_decay_rate: 0.1
+step: [70, 100]
+warm_up_epoch: 5
+
+# training
+device: [0]
+batch_size: 64
+test_batch_size: 64
+num_epoch: 150
+# official numpoche: 65
+nesterov: True
+seed : 2
