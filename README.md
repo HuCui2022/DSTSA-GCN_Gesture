@@ -84,14 +84,11 @@ python ensemble.py --config ensemble.yaml
 ## Citation
 
 ```
-@article{cui2024joint,
-  title={Joint-Partition Group Attention for skeleton-based action recognition},
-  author={Cui, Hu and Hayama, Tessai},
-  journal={Signal Processing},
-  volume={224},
-  pages={109592},
-  year={2024},
-  publisher={Elsevier}
+@article{cui2025dstsa,
+  title={DSTSA-GCN: Advancing Skeleton-Based Gesture Recognition with Semantic-Aware Spatio-Temporal Topology Modeling},
+  author={Cui, Hu and Huang, Renjing and Zhang, Ruoyu and Hayama, Tessai},
+  journal={arXiv preprint arXiv:2501.12086},
+  year={2025}
 }
 ```
 
