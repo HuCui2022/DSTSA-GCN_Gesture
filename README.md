@@ -37,7 +37,8 @@ PyTorch implementation of “DSTSA-GCN: Advancing Skeleton-Based Gesture Recogni
 
 - DHG : Download from [Google Drive](https://drive.google.com/file/d/1GIM3qQRrfHzZbRusXpcrakWQR2n31t86/view?usp=sharing).
 
-- **NTU RGB+D 60** dataset from [Baidu Drive](https://pan.baidu.com/s/16WmFFkGwZM6be93L376WUQ?pwd=TDGC) 
+- **NTU RGB+D 60** dataset from [Baidu Drive](https://pan.baidu.com/s/16WmFFkGwZM6be93L376WUQ?pwd=TDGC)
+- UCLA dataset from : [Google Drive](https://www.dropbox.com/scl/fi/6numm9wzu1cixw8nyzb91/all_sqe.zip?rlkey=it1ruxtsm4rggxldbbbr4w3yj&e=1&dl=0)
 
 ## Training :
 
