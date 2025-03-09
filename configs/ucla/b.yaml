@@ -1,9 +1,9 @@
-work_dir: ./work_dir/ucla/criss_stgcnv2/joint_4rand  #
+work_dir: ./work_dir/ucla/criss_stgcnv2/bone  #
 
 # feeder
 feeder: feeders.feeder_ucla.Feeder
 train_feeder_args:
-  data_path: joint
+  data_path: bone
   label_path: train
   debug: False
   random_choose: True
@@ -14,7 +14,7 @@ train_feeder_args:
   repeat: 5
 
 test_feeder_args:
-  data_path: joint
+  data_path: bone
   label_path: val
   debug: False
 
@@ -26,7 +26,7 @@ model_args:
 #    layout: "nturgb+d"
     layout: "ucla"
     mode: "random"    # seperated_adjacency
-    num_filter: 4
+    num_filter: 8
     init_off: 0.04
     init_std: 0.02
   num_classes: 10
