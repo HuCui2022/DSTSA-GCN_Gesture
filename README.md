@@ -65,7 +65,11 @@ python main.py --config configs/nut60/xsub/joint.yaml
 python main.py --config configs/nut120/xsub/joint.yaml
 ```
 
+### NW-UCLA
 
+```
+python main.py --config configs/ucla/j.yaml
+```
 
 ## Testing
 
