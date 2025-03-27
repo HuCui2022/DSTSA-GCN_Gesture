@@ -89,11 +89,15 @@ python ensemble.py --config ensemble.yaml
 ## Citation
 
 ```
-@article{cui2025dstsa,
-  title={DSTSA-GCN: Advancing Skeleton-Based Gesture Recognition with Semantic-Aware Spatio-Temporal Topology Modeling},
-  author={Cui, Hu and Huang, Renjing and Zhang, Ruoyu and Hayama, Tessai},
-  journal={arXiv preprint arXiv:2501.12086},
-  year={2025}
+@article{CUI2025130066,
+title = {Dstsa-gcn: Advancing skeleton-based gesture recognition with semantic-aware spatio-temporal topology modeling},
+journal = {Neurocomputing},
+pages = {130066},
+year = {2025},
+issn = {0925-2312},
+doi = {https://doi.org/10.1016/j.neucom.2025.130066},
+url = {https://www.sciencedirect.com/science/article/pii/S0925231225007386},
+author = {Hu Cui and Renjing Huang and Ruoyu Zhang and Tessai Hayama}
 }
 ```
 
