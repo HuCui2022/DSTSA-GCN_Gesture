@@ -116,6 +116,15 @@ doi = {https://doi.org/10.1016/j.neucom.2025.130066},
 url = {https://www.sciencedirect.com/science/article/pii/S0925231225007386},
 author = {Hu Cui and Renjing Huang and Ruoyu Zhang and Tessai Hayama}
 }
+@article{cui2024joint,
+  title={Joint-Partition Group Attention for skeleton-based action recognition},
+  author={Cui, Hu and Hayama, Tessai},
+  journal={Signal Processing},
+  volume={224},
+  pages={109592},
+  year={2024},
+  publisher={Elsevier}
+}
 ```
 
 Our project is based on the :  [DSTA-Net](https://github.com/lshiwjx/DSTA-Net), [CTR-GCN](https://github.com/Uason-Chen/CTR-GCN),[DG-STGCN](https://github.com/kennymckormick/pyskl/blob/main/configs/dgstgcn/README.md) [TD-GCN](https://github.com/liujf69/TD-GCN-Gesture)
