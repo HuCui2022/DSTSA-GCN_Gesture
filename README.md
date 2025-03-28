@@ -4,6 +4,18 @@ PyTorch implementation of “DSTSA-GCN: Advancing Skeleton-Based Gesture Recogni
 
 [DSTSA-GCN : Proj](https://hucui2022.github.io/dstsa_gcn/)
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/hand-gesture-recognition-on-dhg-28)](https://paperswithcode.com/sota/hand-gesture-recognition-on-dhg-28?p=dstsa-gcn-advancing-skeleton-based-gesture)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/skeleton-based-action-recognition-on-shrec)](https://paperswithcode.com/sota/skeleton-based-action-recognition-on-shrec?p=dstsa-gcn-advancing-skeleton-based-gesture)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/hand-gesture-recognition-on-dhg-14)](https://paperswithcode.com/sota/hand-gesture-recognition-on-dhg-14?p=dstsa-gcn-advancing-skeleton-based-gesture)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/action-recognition-in-videos-on-ntu-rgbd-120)](https://paperswithcode.com/sota/action-recognition-in-videos-on-ntu-rgbd-120?p=dstsa-gcn-advancing-skeleton-based-gesture)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/skeleton-based-action-recognition-on-n-ucla)](https://paperswithcode.com/sota/skeleton-based-action-recognition-on-n-ucla?p=dstsa-gcn-advancing-skeleton-based-gesture)
+
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/action-recognition-in-videos-on-ntu-rgbd)](https://paperswithcode.com/sota/action-recognition-in-videos-on-ntu-rgbd?p=dstsa-gcn-advancing-skeleton-based-gesture)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/skeleton-based-action-recognition-on-ntu-rgbd-1)](https://paperswithcode.com/sota/skeleton-based-action-recognition-on-ntu-rgbd-1?p=dstsa-gcn-advancing-skeleton-based-gesture)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/dstsa-gcn-advancing-skeleton-based-gesture/skeleton-based-action-recognition-on-ntu-rgbd)](https://paperswithcode.com/sota/skeleton-based-action-recognition-on-ntu-rgbd?p=dstsa-gcn-advancing-skeleton-based-gesture)
+
+
 # Data Preparation
 
 ### method 1:
